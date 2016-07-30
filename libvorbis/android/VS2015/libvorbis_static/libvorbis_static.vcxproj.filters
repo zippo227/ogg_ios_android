@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\libogg\include\ogg\ogg.h">
+      <Filter>include\ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\libogg\include\ogg\os_types.h">
+      <Filter>include\ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\vorbis\codec.h">
+      <Filter>include\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\vorbis\vorbisenc.h">
+      <Filter>include\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\vorbis\vorbisfile.h">
+      <Filter>include\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\backends.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\bitrate.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\codebook.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\codec_internal.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\envelope.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\highlevel.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\lookup.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\lookup_data.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\lpc.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\lsp.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\masking.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\mdct.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\misc.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\os.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\psy.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\registry.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\scales.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\smallft.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\window.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\floor_all.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\psych_8.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\psych_11.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\psych_16.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\psych_44.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\residue_8.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\residue_16.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\residue_44.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\residue_44p51.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\residue_44u.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\setup_8.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\setup_11.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\setup_16.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\setup_22.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\setup_32.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\setup_44.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\setup_44p51.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\setup_44u.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\modes\setup_X.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\books\coupled\res_books_51.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\books\coupled\res_books_stereo.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\books\floor\floor_books.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\books\uncoupled\res_books_uncoupled.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="lib">
+      <UniqueIdentifier>{3be35d1c-ca90-4683-96e7-6ee1c71b8984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{20c6ab94-7571-46ed-84c7-53be7410329a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\ogg">
+      <UniqueIdentifier>{3ea4de2b-43f9-4bc0-a42d-82dd6f19d98b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\vorbis">
+      <UniqueIdentifier>{35d6d062-aa51-4d07-b50a-b9d721e2a9af}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\lib\analysis.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\barkmel.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\bitrate.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\block.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\codebook.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\envelope.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\floor0.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\floor1.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\info.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\lookup.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\lpc.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\lsp.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\mapping0.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\mdct.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\psy.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\registry.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\res0.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\sharedbook.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\smallft.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\synthesis.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\tone.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\window.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\vorbisenc.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\vorbisfile.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
