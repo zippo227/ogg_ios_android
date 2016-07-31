@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <payload>
+  <file path="C:\Code\ogg_enc_buffer\ogg_ios_android\libogg\ios\VS2015\ARM\Debug\libogg_static.xcodeproj\project.pbxproj" changed="2016-07-31T12:49:37.8835487-05:00" />
+  <file path="C:\Code\ogg_enc_buffer\ogg_ios_android\libogg\ios\VS2015\..\..\src\bitwise.c" changed="2016-07-31T11:04:32.9717214-05:00" />
+  <file path="C:\Code\ogg_enc_buffer\ogg_ios_android\libogg\ios\VS2015\..\..\src\framing.c" changed="2016-07-31T11:04:32.9757276-05:00" />
+  <file path="C:\Code\ogg_enc_buffer\ogg_ios_android\libogg\ios\VS2015\..\..\include\ogg\ogg.h" changed="2016-07-31T11:04:32.8814784-05:00" />
+  <file path="C:\Code\ogg_enc_buffer\ogg_ios_android\libogg\ios\VS2015\..\..\include\ogg\os_types.h" changed="2016-07-31T11:04:32.8814784-05:00" />
   <file path="C:\Code\ogg_ios_android\libogg\ios\VS2015\x86\Debug\libogg_static.xcodeproj\project.pbxproj" changed="2016-07-30T07:49:55.0013655-05:00" />
   <file path="C:\Code\ogg_ios_android\libogg\ios\VS2015\..\..\src\bitwise.c" changed="2014-05-27T14:52:34-05:00" />
   <file path="C:\Code\ogg_ios_android\libogg\ios\VS2015\..\..\src\framing.c" changed="2014-05-27T14:52:34-05:00" />
