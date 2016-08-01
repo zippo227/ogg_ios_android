@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvorbis_static", "libvorbis_static\libvorbis_static.vcxproj", "{2B3EEA6F-EAA0-4968-A09A-871EBBA840D5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvorbis_static", "libvorbis\libvorbis_static.vcxproj", "{2B3EEA6F-EAA0-4968-A09A-871EBBA840D5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvorbisfile", "libvorbisfile\libvorbisfile.vcxproj", "{E0EFA3AC-BC7E-4DCB-AAED-E6C6CC41C898}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvorbisfile_static", "libvorbisfile\libvorbisfile_static.vcxproj", "{E0EFA3AC-BC7E-4DCB-AAED-E6C6CC41C898}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vorbisdec", "vorbisdec\vorbisdec.vcxproj", "{9791F453-8744-4779-B6B4-28709C308D47}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vorbisdec_static", "vorbisdec\vorbisdec_static.vcxproj", "{9791F453-8744-4779-B6B4-28709C308D47}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vorbisenc", "vorbisenc\vorbisenc.vcxproj", "{1018354B-70CC-461C-895D-E7FEBF9509D7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vorbisenc_static", "vorbisenc\vorbisenc_static.vcxproj", "{1018354B-70CC-461C-895D-E7FEBF9509D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

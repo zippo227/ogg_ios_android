@@ -35,51 +35,51 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9791f453-8744-4779-b6b4-28709c308d47}</ProjectGuid>
+    <ProjectGuid>{25d3d88c-c3d9-45a7-a826-900868f74004}</ProjectGuid>
     <Keyword>Android</Keyword>
-    <RootNamespace>vorbisdec</RootNamespace>
+    <RootNamespace>libvorbisfile_dynamic</RootNamespace>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <ApplicationType>Android</ApplicationType>
     <ApplicationTypeRevision>2.0</ApplicationTypeRevision>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Clang_3_8</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_3_8</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Clang_3_8</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Clang_3_8</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Clang_3_8</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Clang_3_8</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Clang_3_8</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_3_8</PlatformToolset>
   </PropertyGroup>
@@ -89,18 +89,22 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(RootNamespace)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <TargetName>$(RootNamespace)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <TargetName>$(RootNamespace)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <TargetName>$(RootNamespace)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
   </PropertyGroup>
@@ -108,7 +112,19 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderCompileAs>CompileAsC</PrecompiledHeaderCompileAs>
     </ClCompile>
+    <PreLinkEvent>
+      <Command>xcopy $(SolutionDir)$(Platform)\$(Configuration)\libogg_dynamic.so $(ProjectDir)libogg_dynamic.so* /Y</Command>
+    </PreLinkEvent>
+    <PreLinkEvent>
+      <Message>Copy the ogg library</Message>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>libogg_dynamic.so;</AdditionalDependencies>
+      <AdditionalOptions>-lm</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -120,9 +136,19 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderCompileAs>CompileAsC</PrecompiledHeaderCompileAs>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;$(Sysroot)\usr\include;$(StlIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <PreLinkEvent>
+      <Command>xcopy $(SolutionDir)$(Platform)\$(Configuration)\libogg_dynamic.so $(ProjectDir)libogg_dynamic.so* /Y</Command>
+    </PreLinkEvent>
+    <PreLinkEvent>
+      <Message>Copy the ogg library</Message>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>libogg_dynamic.so;</AdditionalDependencies>
+      <AdditionalOptions>-lm</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
@@ -134,7 +160,19 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderCompileAs>CompileAsC</PrecompiledHeaderCompileAs>
     </ClCompile>
+    <PreLinkEvent>
+      <Command>xcopy $(SolutionDir)$(Platform)\$(Configuration)\libogg_dynamic.so $(ProjectDir)libogg_dynamic.so* /Y</Command>
+    </PreLinkEvent>
+    <PreLinkEvent>
+      <Message>Copy the ogg library</Message>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>libogg_dynamic.so;</AdditionalDependencies>
+      <AdditionalOptions>-lm</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
@@ -146,9 +184,19 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderCompileAs>CompileAsC</PrecompiledHeaderCompileAs>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderCompileAs>CompileAsC</PrecompiledHeaderCompileAs>
     </ClCompile>
+    <PreLinkEvent>
+      <Command>xcopy $(SolutionDir)$(Platform)\$(Configuration)\libogg_dynamic.so $(ProjectDir)libogg_dynamic.so* /Y</Command>
+    </PreLinkEvent>
+    <PreLinkEvent>
+      <Message>Copy the ogg library</Message>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>libogg_dynamic.so;</AdditionalDependencies>
+      <AdditionalOptions>-lm</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
@@ -157,14 +205,15 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\include\vorbis\vorbisfile.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\examples\decoder_example.c" />
+    <ClCompile Include="..\..\..\lib\vorbisfile.c" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libvorbis_static\libvorbis_static.vcxproj">
-      <Project>{2b3eea6f-eaa0-4968-a09a-871ebba840d5}</Project>
+    <ProjectReference Include="..\libvorbis\libvorbis_dynamic.vcxproj">
+      <Project>{27808e2d-04e4-4625-b2d6-c1085df116b8}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

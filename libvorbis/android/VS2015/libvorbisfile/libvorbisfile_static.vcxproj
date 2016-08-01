@@ -35,9 +35,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{100780ff-2aec-4b68-bcce-8788137f06d0}</ProjectGuid>
+    <ProjectGuid>{e0efa3ac-bc7e-4dcb-aaed-e6c6cc41c898}</ProjectGuid>
     <Keyword>Android</Keyword>
-    <RootNamespace>libogg_static</RootNamespace>
+    <RootNamespace>libvorbisfile</RootNamespace>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <ApplicationType>Android</ApplicationType>
     <ApplicationTypeRevision>2.0</ApplicationTypeRevision>
@@ -89,26 +89,18 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>$(RootNamespace)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <IncludePath>$(LLVMToolchainPrebuiltRoot)\lib64\clang\$(LLVMVersion).$(LLVMMinorVersion)\include;</IncludePath>
-    <LibraryPath>
-    </LibraryPath>
-    <SourcePath>..\..\src</SourcePath>
-    <TargetName>$(RootNamespace)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
-    <TargetName>$(RootNamespace)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <TargetName>$(RootNamespace)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
   </PropertyGroup>
@@ -116,8 +108,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\include;$(Sysroot)\usr\include;$(StlIncludeDirectories);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PrecompiledHeaderCompileAs>CompileAsC</PrecompiledHeaderCompileAs>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,9 +121,8 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <CLanguageStandard>Default</CLanguageStandard>
       <PrecompiledHeaderCompileAs>CompileAsC</PrecompiledHeaderCompileAs>
-      <AdditionalIncludeDirectories>..\..\include;$(Sysroot)\usr\include;$(StlIncludeDirectories);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
@@ -145,8 +135,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\include;$(Sysroot)\usr\include;$(StlIncludeDirectories);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PrecompiledHeaderCompileAs>CompileAsC</PrecompiledHeaderCompileAs>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
@@ -160,7 +149,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderCompileAs>CompileAsC</PrecompiledHeaderCompileAs>
-      <AdditionalIncludeDirectories>..\..\include;$(Sysroot)\usr\include;$(StlIncludeDirectories);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -170,13 +159,16 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\ogg\ogg.h" />
-    <ClInclude Include="..\..\include\ogg\os_types.h" />
+    <ClInclude Include="..\..\..\include\vorbis\vorbisfile.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\bitwise.c" />
-    <ClCompile Include="..\..\src\framing.c" />
+    <ProjectReference Include="..\libvorbis_static.vcxproj">
+      <Project>{2b3eea6f-eaa0-4968-a09a-871ebba840d5}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\lib\vorbisfile.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
