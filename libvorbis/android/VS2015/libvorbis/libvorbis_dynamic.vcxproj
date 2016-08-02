@@ -134,11 +134,11 @@
     </ClCompile>
     <Link>
       <IncrementalLink>false</IncrementalLink>
-      <VerboseOutput>true</VerboseOutput>
-      <AdditionalDependencies>libogg_dynamic.so;</AdditionalDependencies>
+      <VerboseOutput>false</VerboseOutput>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);</LibraryDependencies>
       <AdditionalOptions>-lm</AdditionalOptions>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainVersion);$(StlLibraryPath)</AdditionalLibraryDirectories>
     </Link>
     <CustomBuildStep>
       <Command>
@@ -179,11 +179,11 @@
     </ClCompile>
     <Link>
       <IncrementalLink>false</IncrementalLink>
-      <VerboseOutput>true</VerboseOutput>
-      <AdditionalDependencies>libogg_dynamic.so;</AdditionalDependencies>
+      <VerboseOutput>false</VerboseOutput>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);</LibraryDependencies>
       <AdditionalOptions>-lm</AdditionalOptions>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainVersion);$(StlLibraryPath)</AdditionalLibraryDirectories>
     </Link>
     <CustomBuildStep>
       <Command>
@@ -224,11 +224,11 @@
     </ClCompile>
     <Link>
       <IncrementalLink>false</IncrementalLink>
-      <VerboseOutput>true</VerboseOutput>
-      <AdditionalDependencies>libogg_dynamic.so;</AdditionalDependencies>
+      <VerboseOutput>false</VerboseOutput>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);</LibraryDependencies>
       <AdditionalOptions>-lm</AdditionalOptions>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainVersion);$(StlLibraryPath)</AdditionalLibraryDirectories>
     </Link>
     <CustomBuildStep>
       <Command>
@@ -269,11 +269,11 @@
     </ClCompile>
     <Link>
       <IncrementalLink>false</IncrementalLink>
-      <VerboseOutput>true</VerboseOutput>
-      <AdditionalDependencies>libogg_dynamic.so;</AdditionalDependencies>
+      <VerboseOutput>false</VerboseOutput>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);</LibraryDependencies>
       <AdditionalOptions>-lm</AdditionalOptions>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainVersion);$(StlLibraryPath)</AdditionalLibraryDirectories>
     </Link>
     <CustomBuildStep>
       <Command>
